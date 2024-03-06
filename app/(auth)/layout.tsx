@@ -1,9 +1,9 @@
-export default function layout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+const Layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <main className="flex min-h-screen w-full items-center justify-center">
+      {children}
+    </main>
   );
-}
+};
+
+export default Layout;
