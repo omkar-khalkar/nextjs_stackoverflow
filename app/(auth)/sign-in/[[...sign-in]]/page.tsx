@@ -1,6 +1,5 @@
 //here add signin componet from clerk
-"use client";
-import { SignIn } from "@clerk/clerk-react";
+import { SignIn } from "@clerk/nextjs";
 import React from "react";
 
 export default function SignInPage() {
