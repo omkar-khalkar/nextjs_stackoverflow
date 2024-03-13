@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
 
+import React from "react";
 import {
   Sheet,
   SheetContent,
@@ -47,6 +47,7 @@ const NavContent = () => {
     </section>
   );
 };
+
 const MobileNav = () => {
   return (
     <Sheet>
