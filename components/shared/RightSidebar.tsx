@@ -6,33 +6,33 @@ import RenderTag from "./RenderTag";
 const RightSidebar = () => {
   const hotQuestions = [
     {
-      _id: 1,
+      _id: "1",
       title: "How do I use express as a custom server in NextJS?",
     },
     {
-      _id: 2,
+      _id: "2",
       title: "How do I use react as a custom server in NextJS?",
     },
     {
-      _id: 3,
+      _id: "3",
       title: "How do I use express as a custom server in NextJS?",
     },
     {
-      _id: 4,
+      _id: "4",
       title: "How do I use usePathname in NextJS?",
     },
     {
-      _id: 5,
+      _id: "5",
       title: "Ho to add a custom domain to my Vercel app ",
     },
   ];
   const popularTags = [
-    { _id: 1, name: "NextJS", totalQuestions: 10 },
-    { _id: 2, name: "React", totalQuestions: 10 },
-    { _id: 3, name: "Express", totalQuestions: 10 },
-    { _id: 4, name: "Vercel", totalQuestions: 10 },
-    { _id: 5, name: "NodeJS", totalQuestions: 10 },
-    { _id: 6, name: "Javascript", totalQuestions: 10 },
+    { _id: "1", name: "NextJS", totalQuestions: 10 },
+    { _id: "2", name: "React", totalQuestions: 10 },
+    { _id: "3", name: "Express", totalQuestions: 10 },
+    { _id: "4", name: "Vercel", totalQuestions: 10 },
+    { _id: "5", name: "NodeJS", totalQuestions: 10 },
+    { _id: "6", name: "Javascript", totalQuestions: 10 },
   ];
   return (
     <section
