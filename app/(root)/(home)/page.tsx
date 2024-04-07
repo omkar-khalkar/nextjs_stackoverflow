@@ -4,6 +4,9 @@ import LocalSearchbar from "@/components/shared/LocalSearchbar";
 import NoResult from "@/components/shared/NoResult";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Filter from "@/components/shared/Filter";
+import { HomePageFilters } from "@/constants/filters";
+
 
 const questions  = [
   {
@@ -67,6 +70,11 @@ export default function Home() {
           imgSrc="/assets/icons/search.svg"
           placeholder="Search for questions"
           otherClasses="flex"
+        />
+        <Filter 
+        filters={HomePageFilters}
+        otherClasses="min-h-[56px] sm:min-w-[170px]"
+        containerClasses="hidden max-md:flex"
         />
       </div>
       <HomeFilters />
