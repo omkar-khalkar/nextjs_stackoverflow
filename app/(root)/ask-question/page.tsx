@@ -4,8 +4,8 @@ import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
 const page = async () => {
-  //const {userId } = auth();
-  const userId = "123456789";
+  const {userId } = auth();
+  //const userId = "123456789";
 
   if(!userId) {
     redirect("/sign-in");
