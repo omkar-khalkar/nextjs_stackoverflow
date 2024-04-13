@@ -6,50 +6,14 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Filter from "@/components/shared/Filter";
 import { HomePageFilters } from "@/constants/filters";
+import { getQuestions } from "@/lib/actions/question.action";
 
 
-const questions  = [
-  {
-    _id: "1",
-    title: "How to add icons in reactJs?",
-    tags: [
-      { _id: "1", name: "Reactjs" },
-      { _id: "2", name: "react-icons" },
-      { _id: "3", name: "react" },
-    ],
-    author: {
-      _id: "1",
-      name: "John Doe",
-      picture: "url/to/picture",
-      clerkId: "clerkIdValue",
-    },
-    upvotes: 200000,
-    views: 100,
-    answers: [], 
-    createdAt: new Date("2024-01-03T00:00:00.000Z"),
-  },
-  {
-    _id: "2",
-    title: "How to center a div ?",
-    tags: [
-      { _id: "1", name: "css" },
-      { _id: "2", name: "tailwindcss" },
-      { _id: "3", name: "react" },
-    ],
-    author: {
-      _id: "2",
-      name: "Jane Doe",
-      picture: "url/to/picture",
-      clerkId: "clerkIdValue",
-    },
-    upvotes: 20000,
-    views: 200,
-    answers: [], 
-    createdAt: new Date("2024-02-01T00:00:00.000Z"),
-  },
-];
 
-export default function Home() {
+
+export default async function Home() {
+  const result = await getQuestions({});
+  console.log(result)
   return (
     <>
       <div className="flex w-full flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center ">
@@ -80,8 +44,8 @@ export default function Home() {
       <HomeFilters />
 
       <div className="mt-10 flex w-full flex-col gap-6">
-        {questions.length > 0 ? (
-          questions.map((question) => {
+        {result.questions.length > 0 ? (
+          result.questions.map((question) => {
             return (
               <QuestionCard
                 key={question._id}
@@ -94,7 +58,7 @@ export default function Home() {
                 answers={question.answers}
                 createdAt={question.createdAt}
               />
-            );
+            ); 
           })
         ) : (
           <NoResult
