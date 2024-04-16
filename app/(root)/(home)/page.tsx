@@ -65,7 +65,7 @@ export default async function Home() {
             title="There's no question to show"
             description="Be the first to break the silence ! 🚀 Ask a question and kickstart the discussion. our query could be the next big thing others learn from. Get involved!💡"
             link="/ask-question"
-            LinkTitle="Ask a question"
+            linkTitle="Ask a question"
           />
         )}
       </div>
