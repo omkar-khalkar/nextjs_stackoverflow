@@ -8,27 +8,7 @@ import Tag from "@/database/tag.model";
 import { connectToDatabase } from "@/lib/mongoose";
 
 import type { CreateQuestionParams, EditQuestionParams } from "./shared.types";
-export async function getQuestions(params: GetQuestionsParams) {
-  try {
-    connectToDatabase();
 
-    const questions = await Question.find({})
-      .populate({
-        path: "tags",
-        model: Tag,
-      })
-      .populate({
-        path: "author",
-        model: User,
-      })
-      .sort({ createdAt: -1 });
-
-    return { questions };
-  } catch (error) {
-    console.error(` ${error} `);
-    throw error;
-  }
-}
 export async function createQuestion(params: CreateQuestionParams) {
   try {
     connectToDatabase();
