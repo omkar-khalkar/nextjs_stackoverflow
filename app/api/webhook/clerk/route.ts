@@ -1,6 +1,7 @@
-
+/* eslint-disable camelcase */
 import { NextResponse } from "next/server";
 import { headers } from "next/headers";
+
 import { Webhook } from "svix";
 import { WebhookEvent } from "@clerk/nextjs/server";
 
